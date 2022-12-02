@@ -20,16 +20,11 @@ namespace OralHistory
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class RequirementsPage : Page
+    public sealed partial class RecordingPage : Page
     {
-        public RequirementsPage()
+        public RecordingPage()
         {
             this.InitializeComponent();
-        }
-
-        private void Continue_btn_req_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(AuthorizationPage));
         }
     }
 }
