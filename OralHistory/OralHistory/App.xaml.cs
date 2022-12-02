@@ -7,6 +7,8 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -47,6 +49,13 @@ namespace OralHistory
             {
                 // Create a Frame to act as the navigation context and navigate to the first page
                 rootFrame = new Frame();
+
+                // ADD: Register Navigated event handler
+                rootFrame.Navigated += OnNavigated;
+
+                // ADD: Register BackRequested event handler
+                SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
+
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
 
@@ -94,7 +103,32 @@ namespace OralHistory
         {
             var deferral = e.SuspendingOperation.GetDeferral();
             //TODO: Save application state and stop any background activity
+
+            Frame frame = Window.Current.Content as Frame;
+            ApplicationData.Current.LocalSettings.Values["NavigationState"] = frame.GetNavigationState();
+
             deferral.Complete();
+        }
+
+        // ADD: Navigated event handler
+        private void OnNavigated(object sender, NavigationEventArgs e)
+        {
+            // Determine if Back button should be visible
+            SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility =
+                ((Frame)sender).CanGoBack ?
+                AppViewBackButtonVisibility.Visible :
+                AppViewBackButtonVisibility.Collapsed;
+        }
+
+        // ADD: BackRequested event handler
+        private void OnBackRequested(object sender, BackRequestedEventArgs e)
+        {
+            Frame rootFrame = Window.Current.Content as Frame;
+            if (rootFrame.CanGoBack)
+            {
+                e.Handled = true;
+                rootFrame.GoBack();
+            }
         }
     }
 }
