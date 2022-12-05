@@ -9,9 +9,10 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button x:Name="Authorization_btn" Content="Continue" Margin="0,780,0,0" VerticalAlignment="Top" Height="65" Width="289" HorizontalAlignment="Center" Background="#FFCE9708" Foreground="White" FontSize="30" CornerRadius="12,12,12,12" FontWeight="Normal" FontFamily="Segoe UI" Click="Authorization_btn_Click"/>
-        <TextBlock x:Name="Title_main_req" HorizontalAlignment="Left" Margin="92,212,0,0" TextWrapping="Wrap" Text="Oral History Storytelling Booth" VerticalAlignment="Top" FontSize="40"/>
-        <TextBlock x:Name="reference_title" HorizontalAlignment="Left" Margin="152,322,0,0" TextWrapping="Wrap" Text="Reference Information" VerticalAlignment="Top" FontSize="42" FontWeight="Bold"/>
+        <Image Source="/Images/OralHistory-Background.png"/>
+        <Button x:Name="Authorization_btn" Content="Continue" Margin="0,862,0,0" VerticalAlignment="Top" Height="65" Width="289" HorizontalAlignment="Center" Background="#FFCE9708" Foreground="White" FontSize="30" CornerRadius="12,12,12,12" FontWeight="Normal" FontFamily="Segoe UI" Click="Authorization_btn_Click"/>
+        <TextBlock x:Name="reference_title" HorizontalAlignment="Left" Margin="95,387,0,0" TextWrapping="Wrap" Text="Reference Information" VerticalAlignment="Top" FontSize="42" FontWeight="Bold" Foreground="Black"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="61,529,0,0" TextWrapping="Wrap" Text="This is new text to test if the new background image shows up" VerticalAlignment="Top" Height="137" Width="242"/>
 
     </Grid>
 </Page>

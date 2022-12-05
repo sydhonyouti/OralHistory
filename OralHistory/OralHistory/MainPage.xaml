@@ -9,8 +9,9 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Image Source="Images/Welcome Page.png"/>
         <Button x:Name="Continue_btn" Content="Share Story" Margin="0,780,0,0" VerticalAlignment="Top" Height="65" Width="289" HorizontalAlignment="Center" Background="#FFCE9708" Foreground="White" FontSize="30" CornerRadius="12,12,12,12" Click="Continue_btn_Click" FontWeight="Normal" FontFamily="Segoe UI"/>
-        <TextBlock x:Name="Title_main" HorizontalAlignment="Left" Margin="466,278,0,0" TextWrapping="Wrap" Text="Oral History Storytelling Booth" VerticalAlignment="Top" FontSize="45"/>
+        <TextBlock x:Name="Title_main" HorizontalAlignment="Left" Margin="466,278,0,0" TextWrapping="Wrap" Text="Oral History Storytelling Booth" VerticalAlignment="Top" FontSize="45" Foreground="Black"/>
 
     </Grid>
 </Page>
