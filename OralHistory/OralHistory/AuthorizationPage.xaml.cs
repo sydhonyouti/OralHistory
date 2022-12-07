@@ -31,5 +31,10 @@ namespace OralHistory
         {
             Frame.Navigate(typeof(RecordingPage));
         }
+
+        private void firstName_textBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

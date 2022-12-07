@@ -141,9 +141,9 @@
   <ItemGroup>
     <Content Include="Images\2480HardingImg-400.scale-400.jpg" />
     <Content Include="Images\2480HardingImg.scale-400.jpg" />
+    <Content Include="Images\Background.png" />
     <Content Include="Images\harding-logo.png" />
-    <Content Include="Images\OralHistory-Background.png" />
-    <Content Include="Images\RecordingPage.png" />
+    <Content Include="Images\updatedRecordingBackground.png" />
     <Content Include="Images\Welcome Page.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
