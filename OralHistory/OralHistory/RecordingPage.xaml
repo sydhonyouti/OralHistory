@@ -9,9 +9,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Image Source="Images/RecordingPage.png"/>
         <Button x:Name="Continue_btn_req" Content="Continue" Margin="0,780,0,0" VerticalAlignment="Top" Height="65" Width="289" HorizontalAlignment="Center" Background="#FFCE9708" Foreground="White" FontSize="30" CornerRadius="12,12,12,12" FontWeight="Normal" FontFamily="Segoe UI"/>
-        <TextBlock x:Name="Title_main_req" HorizontalAlignment="Left" Margin="92,212,0,0" TextWrapping="Wrap" Text="Oral History Storytelling Booth" VerticalAlignment="Top" FontSize="40"/>
-        <TextBlock x:Name="Title_main_Copy" HorizontalAlignment="Left" Margin="152,322,0,0" TextWrapping="Wrap" Text="Recording Page" VerticalAlignment="Top" FontSize="42" FontWeight="Bold"/>
 
     </Grid>
 </Page>
