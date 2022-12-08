@@ -11,17 +11,66 @@
     <RelativePanel>
         <Image Source="Images/updatedRecordingBackground.png" RelativePanel.AlignTopWithPanel="True"/>
         <TextBlock x:Name="user_name" TextWrapping="Wrap" Text="User Name" RelativePanel.AlignTopWithPanel="True" Margin="50,285,0,0" FontSize="30" Foreground="White" FontWeight="Bold"/>
-        <TextBlock x:Name="edit_btn" TextWrapping="Wrap" Text="Edit" RelativePanel.AlignTopWithPanel="True" Margin="440,285,0,0" FontSize="25" Foreground="Black"/>
+
+        <Button RelativePanel.AlignTopWithPanel="True" Margin="430,280,0,0" Content="Edit" Background="#00000000" FontSize="25"/>
+        <Button RelativePanel.AlignTopWithPanel="True" Margin="395,20,0,0" Height="40" Width="40" Padding="0" BorderThickness="0" Background="#00000000">
+            <Image RelativePanel.AlignTopWithPanel="True" Source="/Images/edit 1.png" Stretch="UniformToFill"/>
+        </Button>
+        
         <Image Height="100" Width="40" RelativePanel.AlignTopWithPanel="True" Margin="395,250,0,0" Source="/Images/edit 1.png"/>
         <TextBlock x:Name="story_decade" TextWrapping="Wrap" Text="Story's Decade:" RelativePanel.AlignTopWithPanel="True" Margin="50,360,0,0" FontSize="30" Foreground="#FF040404"/>
         <TextBlock x:Name="harding_stu" TextWrapping="Wrap" Text="Harding Student?" RelativePanel.AlignTopWithPanel="True" Margin="50,400,0,0" FontSize="30" Foreground="#FF040404"/>
 
         <TextBlock x:Name="add_tags" TextWrapping="Wrap" Text="*Add Tags:" RelativePanel.AlignTopWithPanel="True" Margin="50,650,0,0" FontSize="30" Foreground="White" FontWeight="Normal"/>
-        <Button x:Name="chapel_btn" Content="Chapel" RelativePanel.AlignTopWithPanel="True" CornerRadius="6" Margin="50,720,0,0" Background="Black" Foreground="White" HorizontalAlignment="Left" FontSize="25" Width="110"/>
-        <Button x:Name="dorm_btn" Content="Dorm" RelativePanel.AlignTopWithPanel="True" CornerRadius="6" Margin="175,720,0,0" Background="Black" Foreground="White" HorizontalAlignment="Left" FontSize="25" Width="110"/>
-        <Button x:Name="classes_btn" Content="Classes" RelativePanel.AlignTopWithPanel="True" CornerRadius="6" Margin="300,720,0,0" Background="Black" Foreground="White" HorizontalAlignment="Left" FontSize="25" Width="120"/>
-        <Button x:Name="caf_btn" Content="Cafeteria" RelativePanel.AlignTopWithPanel="True" CornerRadius="6" Margin="50,780,0,0" Background="Black" Foreground="White" HorizontalAlignment="Left" FontSize="25" Width="130"/>
+        <RelativePanel RelativePanel.AlignTopWithPanel="True" Margin="10,0,0,0">
+            <Button x:Name="chapel_btn" Content="Chapel" CornerRadius="6" Margin="50,720,0,0" Background="Black" Foreground="White" HorizontalAlignment="Left" FontSize="25" Width="110"/>
+            <Button x:Name="dorm_btn" Content="Dorm" CornerRadius="6" Margin="175,720,0,0" Background="Black" Foreground="White" HorizontalAlignment="Left" FontSize="25" Width="100"/>
+            <Button x:Name="classes_btn" Content="Classes" CornerRadius="6" Margin="290,720,0,0" Background="Black" Foreground="White" HorizontalAlignment="Left" FontSize="25" Width="110"/>
+            
+            <Button x:Name="caf_btn" Content="Cafeteria" CornerRadius="6" Margin="50,780,0,0" Background="Black" Foreground="White" HorizontalAlignment="Left" FontSize="25" Width="130"/>
+            <Button x:Name="gac_btn" Content="GAC" CornerRadius="6" Margin="195,780,0,0" Background="Black" Foreground="White" HorizontalAlignment="Left" FontSize="25" Width="80"/>
+            <Button x:Name="parking_btn" Content="Parking" CornerRadius="6" Margin="290,780,0,0" Background="Black" Foreground="White" HorizontalAlignment="Left" FontSize="25" Width="110"/>
 
+            <Button x:Name="abroad_btn" Content="Abroad" CornerRadius="6" Margin="50,840,0,0" Background="Black" Foreground="White" HorizontalAlignment="Left" FontSize="25" Width="110"/>
+            <Button x:Name="athletics_btn" Content="Athletics" CornerRadius="6" Margin="175,840,0,0" Background="Black" Foreground="White" HorizontalAlignment="Left" FontSize="25" Width="120"/>
+            <Button x:Name="library_btn" Content="Library" CornerRadius="6" Margin="310,840,0,0" Background="Black" Foreground="White" HorizontalAlignment="Left" FontSize="25" Width="105"/>
 
+            <Button x:Name="other_btn" Content="Other" CornerRadius="6" Margin="50,900,0,0" Background="Black" Foreground="White" HorizontalAlignment="Left" FontSize="25" Width="100"/>
+        </RelativePanel>
+
+        <RelativePanel RelativePanel.AlignTopWithPanel="True" Margin="0,40,0,0">
+            <TextBlock TextWrapping="Wrap" Text="Click the button to start recording." Margin="760,400,0,0" FontSize="32"/>
+            <TextBlock TextWrapping="Wrap" Text="Must not exceed 10 minutes" Margin="830,445,0,0" FontSize="28" Foreground="#FFEA0B0B"/>
+            <Button RelativePanel.AlignTopWithPanel="True" Margin="970,495,0,0" Height="60" Width="60" Padding="0" BorderThickness="0" Background="#00000000">
+                <Image Source="/Images/voice 1.png" Stretch="UniformToFill"/>
+            </Button>
+        </RelativePanel>
+
+        <RelativePanel RelativePanel.AlignTopWithPanel="True" Margin="70,35,0,0">
+            <Button Margin="810,700,0,0" Height="40" Width="40" Padding="0" BorderThickness="0" Background="#00000000">
+                <Image Source="/Images/stop-button 1.png" Stretch="UniformToFill"/>
+            </Button>
+            <Button Content="Stop" Margin="800,730,0,0" FontSize="20" Background="#00000000"></Button>
+
+            <Button Margin="910,700,0,0" Height="38" Width="38" Padding="0" BorderThickness="0" Background="#00000000">
+                <Image Source="/Images/pause 1.png" Stretch="UniformToFill"/>
+            </Button>
+            <Button Content="Pause" Margin="895,730,0,0" FontSize="20" Background="#00000000"></Button>
+
+            <Button Margin="1010,700,0,0" Height="38" Width="38" Padding="0" BorderThickness="0" Background="#00000000">
+                <Image Source="/Images/play 1.png" Stretch="UniformToFill"/>
+            </Button>
+            <Button Content="Resume" Margin="985,730,0,0" FontSize="20" Background="#00000000"></Button>
+        </RelativePanel>
+
+        <Button Margin="540,880,0,0" Height="50" Width="45" Padding="0" BorderThickness="0" Background="#00000000">
+            <Image Source="/Images/trash 1.png" Stretch="UniformToFill"/>
+        </Button>
+        <Button Content="Delete Recording" Margin="500,930,0,0" FontSize="20" Background="#00000000"></Button>
+
+        <Button Margin="1405,890,0,0" Height="45" Width="45" Padding="0" BorderThickness="0" Background="#00000000">
+            <Image Source="/Images/diskette 1.png" Stretch="UniformToFill"/>
+        </Button>
+        <Button Content="Save Recording" Margin="1340,930,0,0" FontSize="20" Background="#00000000"></Button>
     </RelativePanel>
 </Page>
