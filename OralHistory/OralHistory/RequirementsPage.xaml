@@ -9,15 +9,15 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <RelativePanel>
-        <Image Source="Images/OralHistory-Background.png" RelativePanel.AlignTopWithPanel="True"/>
+        <Image Source="Images/Background.png" Stretch="Fill" RelativePanel.AlignTopWithPanel="True" RequestedTheme="Light"/>
         <Button x:Name="Continue_btn_req" Content="Continue" Height="65" Width="289" RelativePanel.AlignVerticalCenterWithPanel="True" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="0,700,0,0" Background="#FFCE9708" Foreground="White" FontSize="30" CornerRadius="12,12,12,12" FontWeight="Normal" FontFamily="Segoe UI" Click="Continue_btn_req_Click"/>
         <TextBlock x:Name="requirements_title" RelativePanel.AlignTopWithPanel="True" Margin="100,400,0,0" TextWrapping="Wrap" Text="Requirements" FontSize="42" FontWeight="Bold" Foreground="Black"/>
         <TextBlock TextWrapping="Wrap" Text="1. Recordings must not exceed 10 minutes." RelativePanel.AlignTopWithPanel="True" Margin="120,480,0,0" FontSize="30" Foreground="Red"/>
         <TextBlock TextWrapping="Wrap" Text="2. Stories must be appropiate. All stories will be reviewed." RelativePanel.AlignTopWithPanel="True" Margin="120,530,0,0" FontSize="30" Foreground="Red"/>
-        <CheckBox RelativePanel.AlignTopWithPanel="True" Margin="120,590,0,0" FontSize="30">
+        <CheckBox RelativePanel.AlignTopWithPanel="True" Margin="120,590,0,0" FontSize="30" Foreground="Black" FocusVisualSecondaryBrush="#99000000" RequestedTheme="Light">
             <TextBlock Text='I acknowledge the "Oral History Story Booth" is a research project.' Margin="12,-10,0,0" />
         </CheckBox>
-        <CheckBox RelativePanel.AlignTopWithPanel="True" Margin="120,640,0,0" FontSize="30">
+        <CheckBox RelativePanel.AlignTopWithPanel="True" Margin="120,640,0,0" FontSize="30" Foreground="Black" RequestedTheme="Light">
             <TextBlock Text='I acknowledge stories will be publicly available on History Booth.' Margin="12,-10,0,0" />
         </CheckBox>
     </RelativePanel>
