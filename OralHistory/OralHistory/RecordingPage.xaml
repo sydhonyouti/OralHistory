@@ -13,11 +13,10 @@
         <TextBlock x:Name="user_name" TextWrapping="Wrap" Text="User Name" RelativePanel.AlignTopWithPanel="True" Margin="50,285,0,0" FontSize="30" Foreground="White" FontWeight="Bold"/>
 
         <Button RelativePanel.AlignTopWithPanel="True" Margin="430,280,0,0" Content="Edit" Background="#00000000" FontSize="25"/>
-        <Button RelativePanel.AlignTopWithPanel="True" Margin="395,20,0,0" Height="40" Width="40" Padding="0" BorderThickness="0" Background="#00000000">
+        <Button RelativePanel.AlignTopWithPanel="True" Margin="395,280,0,0" Height="40" Width="40" Padding="0" BorderThickness="0" Background="#00000000">
             <Image RelativePanel.AlignTopWithPanel="True" Source="/Images/edit 1.png" Stretch="UniformToFill"/>
         </Button>
         
-        <Image Height="100" Width="40" RelativePanel.AlignTopWithPanel="True" Margin="395,250,0,0" Source="/Images/edit 1.png"/>
         <TextBlock x:Name="story_decade" TextWrapping="Wrap" Text="Story's Decade:" RelativePanel.AlignTopWithPanel="True" Margin="50,360,0,0" FontSize="30" Foreground="#FF040404"/>
         <TextBlock x:Name="harding_stu" TextWrapping="Wrap" Text="Harding Student?" RelativePanel.AlignTopWithPanel="True" Margin="50,400,0,0" FontSize="30" Foreground="#FF040404"/>
 
