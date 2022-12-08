@@ -8,22 +8,23 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+
     <RelativePanel>
-        <Image Source="/Images/Background.png" Stretch="Fill" RelativePanel.AlignTopWithPanel="True"/>
-        <Button x:Name="Authorization_btn" Content="Continue" Margin="0,862,0,0" VerticalAlignment="Top" Height="65" Width="289" RelativePanel.AlignVerticalCenterWithPanel="True" RelativePanel.AlignHorizontalCenterWithPanel="True" HorizontalAlignment="Center" Background="#FFCE9708" Foreground="White" FontSize="30" CornerRadius="12,12,12,12" FontWeight="Normal" FontFamily="Segoe UI" Click="Authorization_btn_Click"/>
-        <TextBlock x:Name="reference_title" HorizontalAlignment="Left" Margin="66,320,0,0" TextWrapping="Wrap" Text="Reference Information" VerticalAlignment="Top" FontSize="42" FontWeight="Bold" Foreground="Black"/>
-        <TextBlock x:Name="fillOut" HorizontalAlignment="Left" Margin="87,381,0,0" TextWrapping="Wrap" Text="Please complete the following:" VerticalAlignment="Top" Foreground="Red" FontSize="30"/>
-        <TextBlock x:Name="firstName_title" HorizontalAlignment="Left" Margin="91,434,0,0" TextWrapping="Wrap" Text="First Name:" VerticalAlignment="Top" Foreground="Black" FontSize="30"/>
-        <TextBox x:Name="firstName_textBox" HorizontalAlignment="Left" Margin="288,442,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="270" TextChanged="firstName_textBox_TextChanged" BorderBrush="#66000000" Foreground="{x:Null}" Background="#66FFFFFF" Height="48"/>
-        <TextBlock x:Name="lastName_title" HorizontalAlignment="Left" Margin="91,527,0,0" TextWrapping="Wrap" Text="Last Name:" VerticalAlignment="Top" Foreground="Black" FontSize="30"/>
-        <TextBox x:Name="lastName_textBox" HorizontalAlignment="Left" Margin="288,519,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="270" Background="#66FFFFFF" Foreground="Black" BorderBrush="#66000000" Height="48"/>
-        <TextBlock x:Name="maidenName_title" HorizontalAlignment="Left" Margin="675,527,0,0" TextWrapping="Wrap" Text="Maiden Name (Optional):" VerticalAlignment="Top" FontSize="30" Foreground="Black"/>
-        <TextBox x:Name="maidenName_textBox" HorizontalAlignment="Left" Margin="1047,527,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="48" Width="270" Background="#66FFFFFF" BorderBrush="#66000000"/>
-        <TextBlock x:Name="decade_title" HorizontalAlignment="Left" Margin="87,609,0,0" TextWrapping="Wrap" Text="What story is your decade from?" VerticalAlignment="Top" Foreground="Black" FontSize="30"/>
-        <TextBox x:Name="decade_textBox" HorizontalAlignment="Left" Margin="549,609,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="48" Width="134" Background="#66FFFFFF" BorderBrush="#66000000"/>
-        <TextBlock x:Name="student_title" HorizontalAlignment="Left" Margin="91,696,0,0" TextWrapping="Wrap" Text="Are (or were) you a Harding student?" VerticalAlignment="Top" FontSize="30" Foreground="Black"/>
-        <CheckBox x:Name="yesHardingStudent_checkBox" Content="Yes" Margin="616,704,0,0" VerticalAlignment="Top" Width="57" IsChecked="False" Height="44" BorderThickness="5,5,5,5" RequestedTheme="Light" FontSize="20"/>
-        <CheckBox x:Name="noHardingStudent_checkBox" Content="No" Margin="782,704,0,0" VerticalAlignment="Top" Height="44" RequestedTheme="Light" Width="60" BorderThickness="5,5,5,5" FontSize="20"/>
+        <Image Source="/Images/Background.png" Stretch="Fill"/>
+        <Button x:Name="Authorization_btn" Content="Continue" RelativePanel.AlignVerticalCenterWithPanel="True" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="0,700,0,0" VerticalAlignment="Top" Height="65" Width="289" HorizontalAlignment="Center" Background="#FFCE9708" Foreground="White" FontSize="30" CornerRadius="12,12,12,12" FontWeight="Normal" FontFamily="Segoe UI" Click="Authorization_btn_Click"/>
+        <TextBlock x:Name="reference_title" HorizontalAlignment="Left" Margin="24,282,0,0" TextWrapping="Wrap" Text="Reference Information" VerticalAlignment="Top" FontSize="42" FontWeight="Bold" Foreground="Black"/>
+        <TextBlock x:Name="fillOut" HorizontalAlignment="Left" Margin="57,346,0,0" TextWrapping="Wrap" Text="Please complete the following:" VerticalAlignment="Top" Foreground="Red" FontSize="30"/>
+        <TextBlock x:Name="firstName_title" HorizontalAlignment="Left" Margin="91,403,0,0" TextWrapping="Wrap" Text="First Name:" VerticalAlignment="Top" Foreground="Black" FontSize="30"/>
+        <TextBox x:Name="firstName_textBox" HorizontalAlignment="Left" Margin="288,403,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="270" TextChanged="firstName_textBox_TextChanged" BorderBrush="#66000000" Foreground="{x:Null}" Background="#66FFFFFF" Height="48"/>
+        <TextBlock x:Name="lastName_title" HorizontalAlignment="Left" Margin="91,470,0,0" TextWrapping="Wrap" Text="Last Name:" VerticalAlignment="Top" Foreground="Black" FontSize="30"/>
+        <TextBox x:Name="lastName_textBox" HorizontalAlignment="Left" Margin="288,470,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="270" Background="#66FFFFFF" Foreground="Black" BorderBrush="#66000000" Height="48"/>
+        <TextBlock x:Name="maidenName_title" HorizontalAlignment="Left" Margin="675,470,0,0" TextWrapping="Wrap" Text="Maiden Name (Optional):" VerticalAlignment="Top" FontSize="30" Foreground="Black"/>
+        <TextBox x:Name="maidenName_textBox" HorizontalAlignment="Left" Margin="1047,470,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="48" Width="270" Background="#66FFFFFF" BorderBrush="#66000000"/>
+        <TextBlock x:Name="decade_title" HorizontalAlignment="Left" Margin="87,541,0,0" TextWrapping="Wrap" Text="What story is your decade from?" VerticalAlignment="Top" Foreground="Black" FontSize="30"/>
+        <TextBox x:Name="decade_textBox" HorizontalAlignment="Left" Margin="549,541,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="48" Width="134" Background="#66FFFFFF" BorderBrush="#66000000"/>
+        <TextBlock x:Name="student_title" HorizontalAlignment="Left" Margin="91,616,0,0" TextWrapping="Wrap" Text="Are (or were) you a Harding student?" VerticalAlignment="Top" FontSize="30" Foreground="Black"/>
+        <CheckBox x:Name="yesHardingStudent_checkBox" Content="Yes" Margin="616,616,0,0" VerticalAlignment="Top" Width="57" IsChecked="False" Height="44" BorderThickness="5,5,5,5" RequestedTheme="Light" FontSize="20"/>
+        <CheckBox x:Name="noHardingStudent_checkBox" Content="No" Margin="782,616,0,0" VerticalAlignment="Top" Height="44" RequestedTheme="Light" Width="60" BorderThickness="5,5,5,5" FontSize="20"/>
     </RelativePanel>
     
 </Page>
