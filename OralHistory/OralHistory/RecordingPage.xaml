@@ -8,9 +8,20 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <Image Source="Images/updatedRecordingBackground.png"/>
-        <Button x:Name="Continue_btn_req" Content="Continue" Margin="0,780,0,0" VerticalAlignment="Top" Height="65" Width="289" HorizontalAlignment="Center" Background="#FFCE9708" Foreground="White" FontSize="30" CornerRadius="12,12,12,12" FontWeight="Normal" FontFamily="Segoe UI"/>
+    <RelativePanel>
+        <Image Source="Images/updatedRecordingBackground.png" RelativePanel.AlignTopWithPanel="True"/>
+        <TextBlock x:Name="user_name" TextWrapping="Wrap" Text="User Name" RelativePanel.AlignTopWithPanel="True" Margin="50,285,0,0" FontSize="30" Foreground="White" FontWeight="Bold"/>
+        <TextBlock x:Name="edit_btn" TextWrapping="Wrap" Text="Edit" RelativePanel.AlignTopWithPanel="True" Margin="440,285,0,0" FontSize="25" Foreground="Black"/>
+        <Image Height="100" Width="40" RelativePanel.AlignTopWithPanel="True" Margin="395,250,0,0" Source="/Images/edit 1.png"/>
+        <TextBlock x:Name="story_decade" TextWrapping="Wrap" Text="Story's Decade:" RelativePanel.AlignTopWithPanel="True" Margin="50,360,0,0" FontSize="30" Foreground="#FF040404"/>
+        <TextBlock x:Name="harding_stu" TextWrapping="Wrap" Text="Harding Student?" RelativePanel.AlignTopWithPanel="True" Margin="50,400,0,0" FontSize="30" Foreground="#FF040404"/>
 
-    </Grid>
+        <TextBlock x:Name="add_tags" TextWrapping="Wrap" Text="*Add Tags:" RelativePanel.AlignTopWithPanel="True" Margin="50,650,0,0" FontSize="30" Foreground="White" FontWeight="Normal"/>
+        <Button x:Name="chapel_btn" Content="Chapel" RelativePanel.AlignTopWithPanel="True" CornerRadius="6" Margin="50,720,0,0" Background="Black" Foreground="White" HorizontalAlignment="Left" FontSize="25" Width="110"/>
+        <Button x:Name="dorm_btn" Content="Dorm" RelativePanel.AlignTopWithPanel="True" CornerRadius="6" Margin="175,720,0,0" Background="Black" Foreground="White" HorizontalAlignment="Left" FontSize="25" Width="110"/>
+        <Button x:Name="classes_btn" Content="Classes" RelativePanel.AlignTopWithPanel="True" CornerRadius="6" Margin="300,720,0,0" Background="Black" Foreground="White" HorizontalAlignment="Left" FontSize="25" Width="120"/>
+        <Button x:Name="caf_btn" Content="Cafeteria" RelativePanel.AlignTopWithPanel="True" CornerRadius="6" Margin="50,780,0,0" Background="Black" Foreground="White" HorizontalAlignment="Left" FontSize="25" Width="130"/>
+
+
+    </RelativePanel>
 </Page>
