@@ -9,8 +9,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <RelativePanel>
-        <Image Source="Images/Welcome Page.png"/>
-        <Button x:Name="Continue_btn" Content="Share Story" Margin="0,866,0,0" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignHorizontalCenterWithPanel="True" Height="65" Width="289" HorizontalAlignment="Center"  Background="#FFCE9708" Foreground="White" FontSize="30" CornerRadius="12,12,12,12" Click="Continue_btn_Click" FontWeight="Normal" FontFamily="Segoe UI"/>
+        <Image Source="Images/Welcome Page.png" Stretch="Fill"/>
+        <Button x:Name="Continue_btn" Content="Share Story" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignHorizontalCenterWithPanel="True" Height="65" Width="289"  Background="#FFCE9708" Foreground="White" FontSize="30" CornerRadius="12,12,12,12" Click="Continue_btn_Click" FontWeight="Normal" FontFamily="Segoe UI"/>
         <TextBlock x:Name="Title_main" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="0,278,0,0" TextWrapping="Wrap" Text="Oral History Storytelling Booth" VerticalAlignment="Top" FontSize="45" Foreground="Black"/>
 
     </RelativePanel>
