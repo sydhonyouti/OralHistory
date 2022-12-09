@@ -125,6 +125,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\AlumiClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecordingPage.xaml.cs">
       <DependentUpon>RecordingPage.xaml</DependentUpon>
@@ -141,6 +142,7 @@
   <ItemGroup>
     <Content Include="Images\2480HardingImg-400.scale-400.jpg" />
     <Content Include="Images\2480HardingImg.scale-400.jpg" />
+    <Content Include="Images\6000pxBackground.png" />
     <Content Include="Images\Background.png" />
     <Content Include="Images\diskette 1.png" />
     <Content Include="Images\edit 1.png" />
