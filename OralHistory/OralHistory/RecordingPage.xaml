@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <RelativePanel>
-        <Image Source="Images/updatedRecordingBackground.png" RelativePanel.AlignTopWithPanel="True"/>
+        <Image Source="Images/updatedRecordingBackground.png" Stretch="Fill" RelativePanel.AlignTopWithPanel="True"/>
         <TextBlock x:Name="user_name" TextWrapping="Wrap" Text="User Name" RelativePanel.AlignTopWithPanel="True" Margin="50,285,0,0" FontSize="30" Foreground="White" FontWeight="Bold"/>
 
         <Button RelativePanel.AlignTopWithPanel="True" Margin="430,280,0,0" Content="Edit" Background="#00000000" FontSize="25"/>
