@@ -125,7 +125,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\AlumiClass.cs" />
+    <Compile Include="Model\AlumniClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecordingPage.xaml.cs">
       <DependentUpon>RecordingPage.xaml</DependentUpon>
