@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,6 +26,16 @@ namespace OralHistory
         public MainPage()
         {
             this.InitializeComponent();
+
+            // Locking the window resizing 
+            var size = new Size(3000, 2000);
+            ApplicationView.PreferredLaunchViewSize = size;
+            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
+            Window.Current.CoreWindow.SizeChanged += (s, e) =>
+            {
+                ApplicationView.GetForCurrentView().TryResizeView(size);
+            };
+
             NavigationCacheMode = NavigationCacheMode.Enabled;
         }
 

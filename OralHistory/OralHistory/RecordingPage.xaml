@@ -10,18 +10,20 @@
 
     <RelativePanel>
         <Image Source="Images/updatedRecordingBackground.png" Stretch="Fill" RelativePanel.AlignTopWithPanel="True"/>
-        <TextBlock x:Name="user_name" TextWrapping="Wrap" Text="Kimberly Laing" RelativePanel.AlignTopWithPanel="True" Margin="50,224,0,0" FontSize="30" Foreground="White" FontWeight="Bold"/>
+        <TextBlock x:Name="user_name" TextWrapping="Wrap" Text="User Name" RelativePanel.AlignTopWithPanel="True" Margin="50,224,0,0" FontSize="30" Foreground="White" FontWeight="Bold"/>
 
-        <Button RelativePanel.AlignTopWithPanel="True" Margin="430,224,0,0" Content="Edit" Background="#00000000" FontSize="25"/>
-        <Button RelativePanel.AlignTopWithPanel="True" Margin="395,224,0,0" Height="40" Width="40" Padding="0" BorderThickness="0" Background="#00000000">
+        <Button RelativePanel.AlignTopWithPanel="True" Margin="398,224,0,0" Content="Edit" Background="#00000000" FontSize="25"/>
+        <Button RelativePanel.AlignTopWithPanel="True" Margin="357,224,0,0" Height="40" Width="40" Padding="0" BorderThickness="0" Background="#00000000">
             <Image RelativePanel.AlignTopWithPanel="True" Source="/Images/edit 1.png" Stretch="UniformToFill"/>
         </Button>
         
-        <TextBlock x:Name="story_decade" TextWrapping="Wrap" Text="Story's Decade: 2016" RelativePanel.AlignTopWithPanel="True" Margin="50,360,0,0" FontSize="30" Foreground="#FF040404"/>
-        <TextBlock x:Name="harding_stu" TextWrapping="Wrap" Text="Harding Student? Yes" RelativePanel.AlignTopWithPanel="True" Margin="50,400,0,0" FontSize="30" Foreground="#FF040404"/>
+        <TextBlock x:Name="story_decade" TextWrapping="Wrap" Text="Story's Decade: 2016" RelativePanel.AlignTopWithPanel="True" Margin="50,300,0,0" FontSize="30" Foreground="#FF040404"/>
+        <TextBlock x:Name="harding_stu" TextWrapping="Wrap" Text="Harding Student? Yes" RelativePanel.AlignTopWithPanel="True" Margin="50,347,0,0" FontSize="30" Foreground="#FF040404"/>
 
-        <TextBlock x:Name="add_tags" TextWrapping="Wrap" Text="*Add Tags:" RelativePanel.AlignTopWithPanel="True" Margin="50,610,0,0" FontSize="30" Foreground="White" FontWeight="Normal"/>
-        <RelativePanel RelativePanel.AlignTopWithPanel="True" Margin="10,0,0,0">
+        <TextBlock x:Name="add_tags" TextWrapping="Wrap" Text="*Add Tags:" RelativePanel.AlignTopWithPanel="True" Margin="50,484,0,0" FontSize="30" Foreground="White" FontWeight="Normal"/>
+        
+        <!-- Tags -->
+        <RelativePanel RelativePanel.AlignTopWithPanel="True" Margin="10,-148,0,0">
             <Button x:Name="chapel_btn" Content="Chapel" CornerRadius="6" Margin="50,688,0,0" Background="Black" Foreground="White" HorizontalAlignment="Left" FontSize="25" Width="110"/>
             <Button x:Name="dorm_btn" Content="Dorm" CornerRadius="6" Margin="175,688,0,0" Background="Black" Foreground="White" HorizontalAlignment="Left" FontSize="25" Width="100"/>
             <Button x:Name="classes_btn" Content="Classes" CornerRadius="6" Margin="290,688,0,0" Background="Black" Foreground="White" HorizontalAlignment="Left" FontSize="25" Width="110"/>
@@ -37,37 +39,39 @@
             <Button x:Name="other_btn" Content="Other" CornerRadius="6" Margin="50,882,0,0" Background="Black" Foreground="White" HorizontalAlignment="Left" FontSize="25" Width="100"/>
         </RelativePanel>
 
+        <!-- Record labels and record icon -->
         <RelativePanel RelativePanel.AlignTopWithPanel="True" Margin="0,40,0,0">
-            <TextBlock TextWrapping="Wrap" Text="Click the button to start recording." Margin="760,400,0,0" FontSize="32"/>
-            <TextBlock TextWrapping="Wrap" Text="Must not exceed 10 minutes" Margin="830,375,0,0" FontSize="28" Foreground="#FFEA0B0B"/>
-            <Button RelativePanel.AlignTopWithPanel="True" Margin="970,495,0,0" Height="60" Width="60" Padding="0" BorderThickness="0" Background="#00000000">
+            <TextBlock TextWrapping="Wrap" Text="Click the button to start recording." Margin="760,289,0,0" FontSize="32" RequestedTheme="Light"/>
+            <TextBlock TextWrapping="Wrap" Text="Must not exceed 10 minutes" Margin="830,251,0,0" FontSize="28" Foreground="#FFEA0B0B"/>
+            <Button Name="recordButton" RelativePanel.AlignTopWithPanel="True" Margin="970,433,0,0" Height="60" Width="60" Padding="0" BorderThickness="0" Background="#00000000" Click="recordButton_Click">
                 <Image Source="/Images/voice 1.png" Stretch="UniformToFill"/>
             </Button>
         </RelativePanel>
-
+        
+        <!-- Stop, Pause, Play buttons -->
         <RelativePanel RelativePanel.AlignTopWithPanel="True" Margin="70,35,0,0">
-            <Button Margin="810,700,0,0" Height="40" Width="40" Padding="0" BorderThickness="0" Background="#00000000">
+            <Button Margin="810,613,0,0" Height="40" Width="40" Padding="0" BorderThickness="0" Background="#00000000">
                 <Image Source="/Images/stop-button 1.png" Stretch="UniformToFill"/>
             </Button>
             <Button Content="Stop" Margin="800,730,0,0" FontSize="20" Background="#00000000"></Button>
 
-            <Button Margin="910,700,0,0" Height="38" Width="38" Padding="0" BorderThickness="0" Background="#00000000">
+            <Button Margin="910,613,0,0" Height="38" Width="38" Padding="0" BorderThickness="0" Background="#00000000">
                 <Image Source="/Images/pause 1.png" Stretch="UniformToFill"/>
             </Button>
             <Button Content="Pause" Margin="895,730,0,0" FontSize="20" Background="#00000000"></Button>
 
-            <Button Margin="1010,700,0,0" Height="38" Width="38" Padding="0" BorderThickness="0" Background="#00000000">
+            <Button Margin="1010,613,0,0" Height="38" Width="38" Padding="0" BorderThickness="0" Background="#00000000">
                 <Image Source="/Images/play 1.png" Stretch="UniformToFill"/>
             </Button>
             <Button Content="Resume" Margin="985,730,0,0" FontSize="20" Background="#00000000"></Button>
         </RelativePanel>
 
-        <Button Margin="540,880,0,0" Height="50" Width="45" Padding="0" BorderThickness="0" Background="#00000000">
+        <Button Margin="540,750,0,0" Height="50" Width="45" Padding="0" BorderThickness="0" Background="#00000000">
             <Image Source="/Images/trash 1.png" Stretch="UniformToFill"/>
         </Button>
         <Button Content="Delete Recording" Margin="500,930,0,0" FontSize="20" Background="#00000000"></Button>
 
-        <Button Margin="1405,890,0,0" Height="45" Width="45" Padding="0" BorderThickness="0" Background="#00000000">
+        <Button Margin="1360,750,31,0" Height="45" Width="45" Padding="0" BorderThickness="0" Background="#00000000">
             <Image Source="/Images/diskette 1.png" Stretch="UniformToFill"/>
         </Button>
         <Button Content="Save Recording" Margin="1340,930,0,0" FontSize="20" Background="#00000000"></Button>

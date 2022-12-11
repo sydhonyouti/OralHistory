@@ -5,6 +5,8 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Media.Capture;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -22,9 +24,27 @@ namespace OralHistory
     /// </summary>
     public sealed partial class RecordingPage : Page
     {
+        // This is being used for the recording portion
+        LowLagMediaRecording mediaRecording;
+
         public RecordingPage()
         {
             this.InitializeComponent();
+
+            // Locking the window resizing 
+            var size = new Size(3000, 2000);
+            ApplicationView.PreferredLaunchViewSize = size;
+            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
+            Window.Current.CoreWindow.SizeChanged += (s, e) =>
+            {
+                ApplicationView.GetForCurrentView().TryResizeView(size);
+            };
+
+        }
+
+        private void recordButton_Click(object sender, RoutedEventArgs e)
+        {
+           // mediaCapture.RecordLimitationExceeded += MediaCapture_RecordLimitationExceeded;
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -26,6 +27,15 @@ namespace OralHistory
         public RequirementsPage()
         {
             this.InitializeComponent();
+
+            // Locking the window resizing 
+            var size = new Size(3000, 2000);
+            ApplicationView.PreferredLaunchViewSize = size;
+            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
+            Window.Current.CoreWindow.SizeChanged += (s, e) =>
+            {
+                ApplicationView.GetForCurrentView().TryResizeView(size);
+            };
         }
 
         // Continue button is disabled but once the last checkbox is clicked it will be enabled
