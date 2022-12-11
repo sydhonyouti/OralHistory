@@ -14,5 +14,9 @@
         <TextBlock x:Name="loginTitle" HorizontalAlignment="Center" Margin="0,345,0,0" TextWrapping="Wrap" Text="Admin Login" VerticalAlignment="Top" RequestedTheme="Light" FontSize="36"/>
         <TextBox x:Name="userNameTextBox" HorizontalAlignment="Left" Margin="688,429,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Height="42" FontSize="20" RequestedTheme="Light"/>
         <TextBlock x:Name="usernameTitle" HorizontalAlignment="Left" Margin="564,437,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" FontSize="20" RequestedTheme="Light"/>
+        <TextBlock x:Name="passwordTitle" HorizontalAlignment="Left" Margin="564,497,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" FontSize="20" RequestedTheme="Light"/>
+        <Button x:Name="loginButton" Content="Login" Margin="0,619,0,0" VerticalAlignment="Top" Height="46" Width="103" HorizontalAlignment="Center" RequestedTheme="Light" BorderThickness="2,2,2,2" Click="loginButton_Click"/>
+        <PasswordBox x:Name="adminPasswordBox" HorizontalAlignment="Left" Margin="688,497,0,0" VerticalAlignment="Top" Height="42" Width="202" PasswordRevealMode="Peek" RequestedTheme="Light" FontSize="20"/>
+        <TextBlock x:Name="errorTitle" HorizontalAlignment="Left" Margin="564,560,0,0" TextWrapping="Wrap" Text="Error" VerticalAlignment="Top" Width="308" FontSize="16" RequestedTheme="Light" Foreground="Red" Visibility="Collapsed"/>
     </Grid>
 </Page>

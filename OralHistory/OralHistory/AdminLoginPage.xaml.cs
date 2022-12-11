@@ -22,9 +22,36 @@ namespace OralHistory
     /// </summary>
     public sealed partial class AdminLoginPage : Page
     {
+        SolidColorBrush colorBrush;
         public AdminLoginPage()
         {
             this.InitializeComponent();
+        }
+
+        public bool checkUsername()
+        {
+            if (userNameTextBox.Text == string.Empty)
+            {
+                errorTitle.Visibility = Visibility;
+                errorTitle.Text = "Please input a username";
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private void loginButton_Click(object sender, RoutedEventArgs e)
+        {
+            bool canContinue = false;
+            // Check to see if the user has the username textbox filled
+            canContinue = checkUsername();
+            if (canContinue)
+            {
+                Frame.Navigate(typeof(AdminMainPage));
+            }
+            
         }
     }
 }
