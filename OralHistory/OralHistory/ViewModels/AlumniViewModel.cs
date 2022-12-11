@@ -13,19 +13,11 @@ namespace OralHistory.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        // ViewModel has instance to model
-        private Alumni alumni;
-
-        public Story story { get; set; }
+        public Alumni alumni;
 
         public AlumniViewModel()
         {
-            this.alumni = new Alumni();
-
-            story = new Story();
-            // Create ViewModel for story
-            var newStory = new StoryViewModel { Length = story.Length, Tags = story.Tags};
-            newStory.PropertyChanged += OnPropertyChanged;
+            alumni = new Alumni();
         }
 
         public string IsAlumni
@@ -34,7 +26,7 @@ namespace OralHistory.ViewModels
             set
             {
                 alumni.IsAlumni = value;
-                OnPropertyChanged(this, new PropertyChangedEventArgs("IsAlumni"));
+                OnPropertyChanged("IsAlumni");
             }
         }
 
@@ -44,7 +36,7 @@ namespace OralHistory.ViewModels
             set
             {
                 alumni.FirstName = value;
-                OnPropertyChanged(this, new PropertyChangedEventArgs("FirstName"));
+                OnPropertyChanged("FirstName");
             }
         }
 
@@ -54,7 +46,7 @@ namespace OralHistory.ViewModels
             set
             {
                 alumni.LastName = value;
-                OnPropertyChanged(this, new PropertyChangedEventArgs("LastName"));
+                OnPropertyChanged("LastName");
             }
         }
 
@@ -64,14 +56,14 @@ namespace OralHistory.ViewModels
             set
             {
                 alumni.MaidenName = value;
-                OnPropertyChanged(this, new PropertyChangedEventArgs("MaidenName"));
+                OnPropertyChanged("MaidenName");
             }
         }
 
-        private void OnPropertyChanged(object sender, PropertyChangedEventArgs e)
+        private void OnPropertyChanged(string property)
         {
-            // Theater name or MovieViewModel changed, so let UI know
-            PropertyChanged?.Invoke(sender, e);
+            // Notify any controls bound to the ViewModel that the property changed
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
         }
     }
 }

@@ -9,11 +9,11 @@ namespace OralHistory.Model
     public class Alumni
     {
         // This is all for the AlumniViewModel
-        // public string Alumni_ID { get; set; }      //unique identifier
         public string IsAlumni { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string MaidenName { get; set; }
-        public Story Story { get; set; }
+
+        //public Story Story { get; set; }
     }
 }

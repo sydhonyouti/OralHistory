@@ -8,10 +8,8 @@ using System.Threading.Tasks;
 
 namespace OralHistory.ViewModels
 {
-    public class StoryViewModel : INotifyPropertyChanged
+    public class StoryViewModel
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-
         // ViewModel has instance to Model
         private Story story;
 
@@ -30,7 +28,6 @@ namespace OralHistory.ViewModels
             set
             {
                 story.Length = value;
-                OnPropertyChanged("Length");
             }
         }
 
@@ -41,16 +38,8 @@ namespace OralHistory.ViewModels
             set
             {
                 story.Tags = value;
-                OnPropertyChanged("Tags");
             }
 
         }
-
-        private void OnPropertyChanged(string property)
-        {
-            // Notify any controls bound to the ViewModel that the property changed
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
-        }
-
     }
 }

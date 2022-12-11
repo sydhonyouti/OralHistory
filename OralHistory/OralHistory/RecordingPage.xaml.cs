@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OralHistory.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -24,6 +25,9 @@ namespace OralHistory
     /// </summary>
     public sealed partial class RecordingPage : Page
     {
+        public AlumniViewModel Alumni { get; set; }
+        public AlumniSummaryViewModel AlumniSummary { get; set; }
+
         // This is being used for the recording portion
         LowLagMediaRecording mediaRecording;
 

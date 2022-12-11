@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OralHistory.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -23,9 +24,16 @@ namespace OralHistory
     /// </summary>
     public sealed partial class AuthorizationPage : Page
     {
+        public AlumniViewModel Alumni { get; set; }
+        public AlumniSummaryViewModel AlumniSummary { get; set; }
+
         public AuthorizationPage()
         {
             this.InitializeComponent();
+
+            Alumni = new AlumniViewModel();
+            AlumniSummary = new AlumniSummaryViewModel();
+
 
             // Locking the window resizing 
             var size = new Size(3000, 2000);
@@ -40,12 +48,12 @@ namespace OralHistory
 
         private void Authorization_btn_Click(object sender, RoutedEventArgs e)
         {
+            
             Frame.Navigate(typeof(RecordingPage));
         }
 
         private void firstName_textBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-
         }
     }
 }
