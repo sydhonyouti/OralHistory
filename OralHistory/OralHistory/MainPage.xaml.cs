@@ -43,5 +43,10 @@ namespace OralHistory
         {
             Frame.Navigate(typeof(RequirementsPage));
         }
+
+        private void adminLockButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AdminLoginPage));
+        }
     }
 }
