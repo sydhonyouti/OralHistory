@@ -16,37 +16,17 @@ namespace OralHistory.ViewModels
         // ViewModel has instance to model
         private Alumni alumni;
 
-        public Story Story { get; set; }
+        public Story story { get; set; }
 
         public AlumniViewModel()
         {
             this.alumni = new Alumni();
 
-            Story = new Story();
-
-            // Create ViewModels for each Story
-            //foreach (var story in alumni.Story)
-            //{
-            //    var newMovie = new MovieViewModel { Title = movie.Title, Rating = movie.Rating };
-            //    newMovie.PropertyChanged += OnPropertyChanged;
-            //    Movies.Add(newMovie);
-            //}
+            story = new Story();
+            // Create ViewModel for story
+            var newStory = new StoryViewModel { Length = story.Length, Tags = story.Tags};
+            newStory.PropertyChanged += OnPropertyChanged;
         }
-
-        //public TheaterViewModel()
-        //{
-        //    this.theater = new Theater();
-
-        //    Movies = new ObservableCollection<MovieViewModel>();
-
-        //    // Create ViewModels for each Movie
-        //    foreach (var movie in theater.Movies)
-        //    {
-        //        var newMovie = new MovieViewModel { Title = movie.Title, Rating = movie.Rating };
-        //        newMovie.PropertyChanged += OnPropertyChanged;
-        //        Movies.Add(newMovie);
-        //    }
-        //}
 
         public string IsAlumni
         {
