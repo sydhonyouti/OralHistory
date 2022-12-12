@@ -29,9 +29,9 @@
         </Button>
         
         <TextBlock x:Name="story_decade" TextWrapping="Wrap" Text="Decade:" RelativePanel.AlignTopWithPanel="True" Margin="50,300,0,0" FontSize="30" Foreground="#FF040404"/>
-        <TextBlock x:Name="decadeDate" TextWrapping="Wrap" Text="1111" RelativePanel.AlignTopWithPanel="True" Margin="155,300,0,0" FontSize="30" Foreground="#FF040404"/>
+        <TextBlock x:Name="decadeDate" TextWrapping="Wrap" Text=" " RelativePanel.AlignTopWithPanel="True" Margin="155,300,0,0" FontSize="30" Foreground="#FF040404"/>
         <TextBlock x:Name="harding_stu" TextWrapping="Wrap" Text="Harding Student?" RelativePanel.AlignTopWithPanel="True" Margin="50,347,0,0" FontSize="30" Foreground="#FF040404"/>
-        <TextBlock x:Name="studentAnswerText" TextWrapping="Wrap" Text="Yes" RelativePanel.AlignTopWithPanel="True" Margin="286,347,0,0" FontSize="30" Foreground="#FF040404"/>
+        <TextBlock x:Name="studentAnswerText" TextWrapping="Wrap" Text=" " RelativePanel.AlignTopWithPanel="True" Margin="286,347,0,0" FontSize="30" Foreground="#FF040404"/>
         <TextBlock x:Name="add_tags" TextWrapping="Wrap" Text="*Add Tags:" RelativePanel.AlignTopWithPanel="True" Margin="50,484,0,0" FontSize="30" Foreground="White" FontWeight="Normal"/>
         
         <!-- Tags -->
