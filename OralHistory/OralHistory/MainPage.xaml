@@ -11,6 +11,7 @@
     <RelativePanel>
         <Image Source="Images/Welcome Page.png" Stretch="Fill"/>
         <Button x:Name="Continue_btn" Content="Share Story" Margin="0,700,0,0" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignHorizontalCenterWithPanel="True" Height="65" Width="289" HorizontalAlignment="Center"  Background="#FFCE9708" Foreground="White" FontSize="30" CornerRadius="12,12,12,12" Click="Continue_btn_Click" FontWeight="Normal" FontFamily="Segoe UI"/>
+        <TextBlock x:Name="description" Text="We invite you to share memories of your time spent at Harding that have impacted your journey, as they are a key part of Harding’s rich history." RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignHorizontalCenterWithPanel="True" TextWrapping="Wrap" FontSize="36" Foreground="Black" RequestedTheme="Light" Width="953" Margin="0,375,0,0"/>
         <TextBlock x:Name="Title_main" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="0,278,0,0" TextWrapping="Wrap" Text="Oral History Storytelling Booth" VerticalAlignment="Top" FontSize="45" Foreground="Black"/>
         <Button x:Name="adminLockButton" RelativePanel.AlignBottomWith="Continue_btn" RelativePanel.LeftOf="Title_main" RequestedTheme="Light" Margin="0,0,292,-26" Click="adminLockButton_Click">
             <Image x:Name="adminLock" Source="Images/lock-02.png"  Height="100" Width="100" RequestedTheme="Light"/>
