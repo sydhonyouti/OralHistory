@@ -48,12 +48,11 @@ namespace OralHistory
 
         private void Authorization_btn_Click(object sender, RoutedEventArgs e)
         {
-            
-            Frame.Navigate(typeof(RecordingPage));
-        }
+            Alumni.FirstName = firstName_textBox.Text;
 
-        private void firstName_textBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
+            Frame.Navigate(typeof(RecordingPage), Alumni.FirstName);
         }
     }
+
 }
+

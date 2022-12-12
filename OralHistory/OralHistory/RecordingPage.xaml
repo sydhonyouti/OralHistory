@@ -4,14 +4,23 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:OralHistory"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local1="using:OralHistory.ViewModels"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <RelativePanel>
         <Image Source="Images/updatedRecordingBackground.png" Stretch="Fill" RelativePanel.AlignTopWithPanel="True"/>
-        <TextBlock x:Name="user_name" TextWrapping="Wrap" Text="{x:Bind AlumniSummary.alumni.FirstName, Mode=OneWay}" RelativePanel.AlignTopWithPanel="True" Margin="50,224,0,0" FontSize="30" Foreground="White" FontWeight="Bold"/>
+        <TextBlock x:Name="user_name" TextWrapping="Wrap" Text="" RelativePanel.AlignTopWithPanel="True" Margin="50,224,0,0" FontSize="30" Foreground="White" FontWeight="Bold"/>
 
+        <!-- Trying listview instead of a textblock -->
+        <!--<ListView RelativePanel.AlignTopWithPanel="True" Margin="50,224,0,0" FontSize="30" Foreground="White" FontWeight="Bold" ItemsSource="{x:Bind Alumni, Mode=OneWay}">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local1:AlumniViewModel">
+                    <TextBlock x:Name="user_name" TextWrapping="Wrap" Text="{x:Bind alumni.FirstName, Mode=OneWay}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>-->
+        
         <Button RelativePanel.AlignTopWithPanel="True" Margin="357,224,0,0" Height="40" Width="105" Padding="0" BorderThickness="0" Background="#00000000" Click="edit_btn">
             <StackPanel Orientation="Horizontal">
                 <Image RelativePanel.AlignTopWithPanel="True" Source="/Images/edit 1.png" Stretch="UniformToFill"/>
@@ -19,7 +28,8 @@
             </StackPanel>
         </Button>
         
-        <TextBlock x:Name="story_decade" TextWrapping="Wrap" Text="" RelativePanel.AlignTopWithPanel="True" Margin="50,300,0,0" FontSize="30" Foreground="#FF040404"/>
+        <TextBlock x:Name="story_decade" TextWrapping="Wrap" Text="Decade:" RelativePanel.AlignTopWithPanel="True" Margin="50,300,0,0" FontSize="30" Foreground="#FF040404"/>
+        <TextBlock x:Name="decadeDate" TextWrapping="Wrap" Text="1111" RelativePanel.AlignTopWithPanel="True" Margin="155,300,0,0" FontSize="30" Foreground="#FF040404"/>
         <TextBlock x:Name="harding_stu" TextWrapping="Wrap" Text="Harding Student?" RelativePanel.AlignTopWithPanel="True" Margin="50,347,0,0" FontSize="30" Foreground="#FF040404"/>
         <TextBlock x:Name="studentAnswerText" TextWrapping="Wrap" Text="Yes" RelativePanel.AlignTopWithPanel="True" Margin="286,347,0,0" FontSize="30" Foreground="#FF040404"/>
         <TextBlock x:Name="add_tags" TextWrapping="Wrap" Text="*Add Tags:" RelativePanel.AlignTopWithPanel="True" Margin="50,484,0,0" FontSize="30" Foreground="White" FontWeight="Normal"/>

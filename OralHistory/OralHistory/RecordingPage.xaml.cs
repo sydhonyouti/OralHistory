@@ -50,6 +50,15 @@ namespace OralHistory
         public AlumniViewModel Alumni { get; set; }
         public AlumniSummaryViewModel AlumniSummary { get; set; }
 
+        //Temporary fix to pass data
+        public class AlumniParam
+        {
+            public AlumniParam() { }
+            public string firstname { get; set; }
+            public string lastname { get; set; }
+            public string isAlumni { get; set; }
+        }
+
         public RecordingPage()
         {
             this.InitializeComponent();
@@ -63,6 +72,12 @@ namespace OralHistory
                 ApplicationView.GetForCurrentView().TryResizeView(size);
             };
 
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            user_name.Text = e.Parameter.ToString();
         }
 
         // Debug.WriteLine(ApplicationData.Current.LocalFolder.Path);
