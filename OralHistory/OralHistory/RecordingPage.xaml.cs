@@ -170,5 +170,19 @@ namespace OralHistory
                 record = true;
             }
         }
+
+        private async void pauseBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Recording_State_Text.Text = "Paused";
+            await capture.PauseRecordAsync(Windows.Media.Devices.MediaCapturePauseBehavior.RetainHardwareResources);
+            record = false;
+        }
+
+        private async void resumeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Recording_State_Text.Text = "Recording...";
+            await capture.ResumeRecordAsync();
+            record = true;
+        }
     }
 }
