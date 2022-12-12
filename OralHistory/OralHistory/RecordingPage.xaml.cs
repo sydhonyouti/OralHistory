@@ -178,8 +178,10 @@ namespace OralHistory
             Recording_State_Text.Text = "Stopped";
             pause_btn.Opacity = 0.4;
             resume_btn.Opacity = 0.4;
+            stop_btn.Opacity = 0.4;
             pause_btn.IsEnabled = false;
             resume_btn.IsEnabled = false;
+            stop_btn.IsEnabled = false;
 
             play_btn.IsEnabled = true;
             play_btn.Opacity = 100;
@@ -233,6 +235,8 @@ namespace OralHistory
         private async void pauseBtn_Click(object sender, RoutedEventArgs e)
         {
             Recording_State_Text.Text = "Paused";
+            pause_btn.IsEnabled = false;
+            pause_btn.Opacity = 0.4;
             resume_btn.IsEnabled = true;
             resume_btn.Opacity = 100;
 
@@ -246,9 +250,16 @@ namespace OralHistory
             Recording_State_Text.Text = "Recording...";
             resume_btn.IsEnabled = false;
             resume_btn.Opacity = 0.4;
+            pause_btn.IsEnabled = true;
+            pause_btn.Opacity = 100;
             _timer.Start();
             await capture.ResumeRecordAsync();
             record = true;
+        }
+
+        private void edit_btn(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AuthorizationPage));
         }
     }
 }

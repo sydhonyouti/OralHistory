@@ -12,9 +12,11 @@
         <Image Source="Images/updatedRecordingBackground.png" Stretch="Fill" RelativePanel.AlignTopWithPanel="True"/>
         <TextBlock x:Name="user_name" TextWrapping="Wrap" Text="{x:Bind AlumniSummary.alumni.FirstName, Mode=OneWay}" RelativePanel.AlignTopWithPanel="True" Margin="50,224,0,0" FontSize="30" Foreground="White" FontWeight="Bold"/>
 
-        <Button RelativePanel.AlignTopWithPanel="True" Margin="398,224,0,0" Content="Edit" Background="#00000000" FontSize="25"/>
-        <Button RelativePanel.AlignTopWithPanel="True" Margin="357,224,0,0" Height="40" Width="40" Padding="0" BorderThickness="0" Background="#00000000">
-            <Image RelativePanel.AlignTopWithPanel="True" Source="/Images/edit 1.png" Stretch="UniformToFill"/>
+        <Button RelativePanel.AlignTopWithPanel="True" Margin="357,224,0,0" Height="40" Width="105" Padding="0" BorderThickness="0" Background="#00000000" Click="edit_btn">
+            <StackPanel Orientation="Horizontal">
+                <Image RelativePanel.AlignTopWithPanel="True" Source="/Images/edit 1.png" Stretch="UniformToFill"/>
+                <TextBlock Text="Edit" Margin="10,5,0,0" FontSize="25" Foreground="White"/>
+            </StackPanel>
         </Button>
         
         <TextBlock x:Name="story_decade" TextWrapping="Wrap" Text="Story's Decade: 2016" RelativePanel.AlignTopWithPanel="True" Margin="50,300,0,0" FontSize="30" Foreground="#FF040404"/>
@@ -50,7 +52,7 @@
         </RelativePanel>
         
         <!-- Timer -->
-        <TextBlock Name="Duration" Text="{Binding}" RelativePanel.AlignTopWithPanel="True" Margin="970,385,0,0" FontSize="35" Foreground="Black"/>
+        <TextBlock Name="Duration" Text="{Binding}" RelativePanel.AlignTopWithPanel="True" Margin="973,385,0,0" FontSize="35" Foreground="Black"/>
 
         <!-- Stop, Pause, Play buttons -->
         <RelativePanel RelativePanel.AlignTopWithPanel="True" Margin="60,5,0,0">
