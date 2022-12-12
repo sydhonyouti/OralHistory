@@ -67,7 +67,19 @@ namespace OralHistory
 
         private async Task<bool> RecordProcess()
         {
+            /*---- xaml update ------*/
             Recording_State_Text.Text = "Recording...";
+
+            stop_btn.IsEnabled = true;
+            pause_btn.IsEnabled = true;
+            resume_btn.IsEnabled = true;
+            play_btn.IsEnabled = true;
+
+            stop_btn.Opacity = 100;
+            pause_btn.Opacity = 100;
+            resume_btn.Opacity = 100;
+            play_btn.Opacity = 100;
+            /*-----------------------*/
 
             if (buffer != null)
             {
