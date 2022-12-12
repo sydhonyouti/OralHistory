@@ -41,9 +41,9 @@
 
         <!-- Record labels and record icon -->
         <RelativePanel RelativePanel.AlignTopWithPanel="True" Margin="0,40,0,0">
-            <TextBlock TextWrapping="Wrap" Text="Click the button to start recording." Margin="760,289,0,0" FontSize="32" RequestedTheme="Light"/>
+            <TextBlock x:Name="Recording_State_Text" TextWrapping="Wrap" Text="Click the button to start recording." Margin="760,289,0,0" FontSize="32" RequestedTheme="Light"/>
             <TextBlock TextWrapping="Wrap" Text="Must not exceed 10 minutes" Margin="830,251,0,0" FontSize="28" Foreground="#FFEA0B0B"/>
-            <Button Name="recordButton" RelativePanel.AlignTopWithPanel="True" Margin="970,433,0,0" Height="60" Width="60" Padding="0" BorderThickness="0" Background="#00000000" Click="recordButton_Click">
+            <Button Name="recordButton" RelativePanel.AlignTopWithPanel="True" Margin="970,433,0,0" Height="60" Width="60" Padding="0" BorderThickness="0" Background="#00000000" Click="recordButton_Click" >
                 <Image Source="/Images/voice 1.png" Stretch="UniformToFill"/>
             </Button>
         </RelativePanel>
@@ -55,12 +55,12 @@
             </Button>
             <Button Content="Stop" Margin="800,730,0,0" FontSize="20" Background="#00000000"></Button>
 
-            <Button Margin="910,613,0,0" Height="38" Width="38" Padding="0" BorderThickness="0" Background="#00000000">
+            <Button Margin="910,613,0,0" Height="38" Width="38" Padding="0" BorderThickness="0" Background="#00000000" Click="stopBtn_Click">
                 <Image Source="/Images/pause 1.png" Stretch="UniformToFill"/>
             </Button>
             <Button Content="Pause" Margin="895,730,0,0" FontSize="20" Background="#00000000"></Button>
 
-            <Button Margin="1010,613,0,0" Height="38" Width="38" Padding="0" BorderThickness="0" Background="#00000000">
+            <Button Margin="1010,613,0,0" Height="38" Width="38" Padding="0" BorderThickness="0" Background="#00000000" Click="playBtn_Click">
                 <Image Source="/Images/play 1.png" Stretch="UniformToFill"/>
             </Button>
             <Button Content="Resume" Margin="985,730,0,0" FontSize="20" Background="#00000000"></Button>
