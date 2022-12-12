@@ -96,15 +96,17 @@ namespace OralHistory
                 await capture.InitializeAsync(settings);
                 capture.RecordLimitationExceeded += async (MediaCapture sender) =>
                 {
-                    //Stop
-                    minutes = Math.Floor(_elapsedTime.TotalSeconds / 60);
-                    if (minutes == 1)
-                    {
-                        _timer.Stop();
-                        await capture.StopRecordAsync();
-                        record = false;
-                        throw new Exception("Record Limitation Exceeded");
-                    }
+                    //Stop After 10 min - fix
+                    //minutes = Math.Floor(_elapsedTime.TotalSeconds / 60);
+                    //if (minutes == 1)
+                    //{
+                    //    _timer.Stop();
+                    //    await capture.StopRecordAsync();
+                    //    record = false;
+                    //    throw new Exception("Record Limitation Exceeded");
+                    //}
+                    record = false;
+                    throw new Exception("Record Limitation Exceeded");
                 };
                 capture.Failed += (MediaCapture sender, MediaCaptureFailedEventArgs errorEventArgs) =>
                 {
