@@ -12,7 +12,7 @@
 
     <Grid>
         <Image Source="Images/Welcome Page.png" Stretch="Fill"/>
-        <Button x:Name="logoutButton" Content="Logout" Margin="70,231,0,0" VerticalAlignment="Top" Height="70" Width="177" RequestedTheme="Light" FontSize="20"/>
+        <Button x:Name="logoutButton" Content="Logout" Margin="70,231,0,0" VerticalAlignment="Top" Height="70" Width="177" RequestedTheme="Light" FontSize="20" Click="logoutButton_Click_1"/>
         <Button x:Name="changePasswordButton" Content="Change Password" Margin="1161,228,0,0" VerticalAlignment="Top" RequestedTheme="Light" Height="70" Width="195" FontSize="20"/>
         <!-- Want: A list view or data grid to see the recordings; first name, last name, maiden name, decade, and audio length-->
        

@@ -30,5 +30,10 @@ namespace OralHistory
             this.InitializeComponent();
 
         }
+
+        private void logoutButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AdminLoginPage));
+        }
     }
 }
