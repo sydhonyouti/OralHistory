@@ -60,7 +60,7 @@
             <Button x:Name="pause_btn" Margin="865,613,0,0" Padding="0" BorderThickness="0" Background="#00000000" Click="pauseBtn_Click" Opacity="0.4" IsEnabled="False">
                 <StackPanel>
                     <Image x:Name="Pause" Source="/Images/pause 1.png" Height="38" Width="38" Stretch="UniformToFill"/>
-                    <TextBlock Text="Pause" Foreground="Black" VerticalAlignment="Center" TextAlignment="Center" FontSize="20"/>
+                    <TextBlock Text="Pause" Foreground="Black" Margin="0,1,0,0" VerticalAlignment="Center" TextAlignment="Center" FontSize="20"/>
                 </StackPanel>
             </Button>
 
