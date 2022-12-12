@@ -40,14 +40,18 @@
         </RelativePanel>
 
         <!-- Record labels and record icon -->
-        <RelativePanel RelativePanel.AlignTopWithPanel="True" Margin="0,40,0,0">
-            <TextBlock x:Name="Recording_State_Text" TextWrapping="Wrap" Text="Click the button to start recording." Margin="760,289,0,0" FontSize="32" RequestedTheme="Light"/>
+        <RelativePanel RelativePanel.AlignTopWithPanel="True" Margin="0,20,0,0">
+            <TextBlock x:Name="Recording_State_Text" TextWrapping="Wrap" Width="487" Text="Click the button to start recording." Margin="760,289,0,0" FontSize="32" RequestedTheme="Light" TextAlignment="Center"/>
             <TextBlock TextWrapping="Wrap" Text="Must not exceed 10 minutes" Margin="830,251,0,0" FontSize="28" Foreground="#FFEA0B0B"/>
-            <Button Name="recordButton" RelativePanel.AlignTopWithPanel="True" Margin="970,410,0,0" Height="60" Width="60" Padding="0" BorderThickness="0" Background="#00000000" Click="recordButton_Click" >
+            <Button Name="recordButton" RelativePanel.AlignTopWithPanel="True" Margin="970,430,0,0" Height="60" Width="60" Padding="0" BorderThickness="0" Background="#00000000" Click="recordButton_Click" >
                 <Image Source="/Images/voice 1.png" Stretch="UniformToFill"/>
             </Button>
+            <TextBlock x:Name="Restart_text" Text="Restart" Margin="969,490,0,0" Foreground="#FFED1515" FontSize="21" Visibility="Collapsed"/>
         </RelativePanel>
         
+        <!-- Timer -->
+        <TextBlock Name="Duration" Text="{Binding}" RelativePanel.AlignTopWithPanel="True" Margin="970,385,0,0" FontSize="35" Foreground="Black"/>
+
         <!-- Stop, Pause, Play buttons -->
         <RelativePanel RelativePanel.AlignTopWithPanel="True" Margin="60,5,0,0">
             <Button x:Name="stop_btn" Margin="780,613,0,0" Padding="0" BorderThickness="0" Background="#00000000" Click="stopBtn_Click" Opacity="0.4" IsEnabled="False">

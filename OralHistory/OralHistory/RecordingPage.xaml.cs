@@ -20,6 +20,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
+using Windows.UI.Xaml.Documents;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
@@ -37,6 +38,10 @@ namespace OralHistory
         private MediaCapture mediaCapture;
         MediaCapture capture;
         InMemoryRandomAccessStream buffer;
+        private DispatcherTimer _timer;
+        private TimeSpan _elapsedTime;
+        private double minutes;
+        private double seconds;
         bool record;
         string filename;
         string audioFile = ".MP3";
@@ -48,7 +53,6 @@ namespace OralHistory
         public RecordingPage()
         {
             this.InitializeComponent();
-            //this._audioRecorder = new AudioRecorder();
 
             // Locking the window resizing 
             var size = new Size(3000, 2000);
@@ -67,19 +71,8 @@ namespace OralHistory
 
         private async Task<bool> RecordProcess()
         {
-            /*---- xaml update ------*/
-            Recording_State_Text.Text = "Recording...";
 
-            stop_btn.IsEnabled = true;
-            pause_btn.IsEnabled = true;
-            resume_btn.IsEnabled = true;
-            play_btn.IsEnabled = true;
-
-            stop_btn.Opacity = 100;
-            pause_btn.Opacity = 100;
-            resume_btn.Opacity = 100;
-            play_btn.Opacity = 100;
-            /*-----------------------*/
+            InitTimer();
 
             if (buffer != null)
             {
@@ -96,14 +89,22 @@ namespace OralHistory
                 {
                     StreamingCaptureMode = StreamingCaptureMode.Audio
                 };
+
                 capture = new MediaCapture();
+                _timer.Start();
+
                 await capture.InitializeAsync(settings);
-                capture.RecordLimitationExceeded += (MediaCapture sender) =>
+                capture.RecordLimitationExceeded += async (MediaCapture sender) =>
                 {
-                    //Stop  
-                    // await capture.StopRecordAsync();  
-                    record = false;
-                    throw new Exception("Record Limitation Exceeded ");
+                    //Stop
+                    minutes = Math.Floor(_elapsedTime.TotalSeconds / 60);
+                    if (minutes == 1)
+                    {
+                        _timer.Stop();
+                        await capture.StopRecordAsync();
+                        record = false;
+                        throw new Exception("Record Limitation Exceeded");
+                    }
                 };
                 capture.Failed += (MediaCapture sender, MediaCaptureFailedEventArgs errorEventArgs) =>
                 {
@@ -120,6 +121,24 @@ namespace OralHistory
                 throw;
             }
             return true;
+        }
+
+        private void InitTimer()
+        {
+            _timer = new DispatcherTimer();
+            _timer.Interval = new TimeSpan(0, 0, 0, 0, 100);
+            _timer.Tick += TimerOnTick;
+        }
+
+        // Source: https://visualstudiomagazine.com/articles/2013/03/21/audio-in-a-windows-store-app.aspx
+        // Source: https://stackoverflow.com/questions/74020123/get-minutes-and-seconds-from-timespan
+        private void TimerOnTick(object sender, object o)
+        {
+            _elapsedTime = _elapsedTime.Add(_timer.Interval);
+            minutes = Math.Floor(_elapsedTime.TotalSeconds / 60);
+            seconds = Math.Ceiling(_elapsedTime.TotalSeconds % 60);
+
+            Duration.DataContext = $"{minutes}:{seconds}";
         }
 
         public async Task PlayRecordedAudio(CoreDispatcher UiDispatcher)
@@ -153,7 +172,19 @@ namespace OralHistory
 
         private async void stopBtn_Click(object sender, RoutedEventArgs e)
         {
+            /*---- xaml update ------*/
             Recording_State_Text.Text = "Stopped";
+            pause_btn.Opacity = 0.4;
+            resume_btn.Opacity = 0.4;
+            pause_btn.IsEnabled = false;
+            resume_btn.IsEnabled = false;
+
+            play_btn.IsEnabled = true;
+            play_btn.Opacity = 100;
+            /*-----------------------*/
+
+            _timer.Stop();
+
             await capture.StopRecordAsync();
             record = false;
         }
@@ -162,6 +193,7 @@ namespace OralHistory
         {
             Recording_State_Text.Text = "Playing Recording";
 
+            // After pressing save, reocrding is saved to localFolder
             await PlayRecordedAudio(Dispatcher);
         }
 
@@ -173,7 +205,20 @@ namespace OralHistory
             }
             else
             {
+                /*---- xaml update ------*/
+                Recording_State_Text.Text = "Recording...";
+                Restart_text.Visibility = Visibility.Visible;
+
+                stop_btn.IsEnabled = true;
+                pause_btn.IsEnabled = true;
+
+                stop_btn.Opacity = 100;
+                pause_btn.Opacity = 100;
+                /*-----------------------*/
+
+                _elapsedTime = TimeSpan.Zero;
                 await RecordProcess();
+
                 await capture.StartRecordToStreamAsync(MediaEncodingProfile.CreateMp3(AudioEncodingQuality.Auto), buffer);
                 if (record)
                 {
@@ -186,6 +231,10 @@ namespace OralHistory
         private async void pauseBtn_Click(object sender, RoutedEventArgs e)
         {
             Recording_State_Text.Text = "Paused";
+            resume_btn.IsEnabled = true;
+            resume_btn.Opacity = 100;
+
+            _timer.Stop();
             await capture.PauseRecordAsync(Windows.Media.Devices.MediaCapturePauseBehavior.RetainHardwareResources);
             record = false;
         }
@@ -193,6 +242,9 @@ namespace OralHistory
         private async void resumeBtn_Click(object sender, RoutedEventArgs e)
         {
             Recording_State_Text.Text = "Recording...";
+            resume_btn.IsEnabled = false;
+            resume_btn.Opacity = 0.4;
+            _timer.Start();
             await capture.ResumeRecordAsync();
             record = true;
         }
