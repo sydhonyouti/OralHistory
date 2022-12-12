@@ -12,3 +12,10 @@ Sydney: Created the authorization page, admin button, login, and main page
 
 Damaris Poppe: 50%
 Sydney Honyouti: 50%
+
+Here are the resources that were used or were going to be used:
+Resources that helped
+https://stackoverflow.com/questions/33919250/passing-data-get-set-between-pages
+https://learn.microsoft.com/en-us/windows/uwp/data-binding/data-binding-quickstart
+https://learn.microsoft.com/en-us/windows/apps/design/controls/password-box
+https://learn.microsoft.com/en-us/windows/communitytoolkit/controls/datagrid_guidance/datagrid_basics
