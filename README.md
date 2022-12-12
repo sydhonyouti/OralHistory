@@ -7,6 +7,7 @@ Once the reader reaches to recording page, the user can record their stories and
 button to go back to edit their form if needed.
 
 Damaris: Added the recording functionality, MVVM and data binding, created the welcome, recording, and requirements page
+
 Sydney: Created the authorization page, admin button, login, and main page
 
 Damaris Poppe: 50%
