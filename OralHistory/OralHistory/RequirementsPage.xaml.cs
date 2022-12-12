@@ -48,7 +48,11 @@ namespace OralHistory
         // The continue button will be enabled once the last checkbox is clicked
         private void historyBoothCheckBox_Checked(object sender, RoutedEventArgs e)
         {
-            Continue_btn_req.IsEnabled = true;
+            if (historyBoothCheckBox.IsChecked == true)
+            {
+                Continue_btn_req.IsEnabled = true;
+            }
+            
         }
     }
 }
