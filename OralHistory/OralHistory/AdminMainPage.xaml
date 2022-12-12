@@ -5,10 +5,20 @@
     xmlns:local="using:OralHistory"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+     xmlns:converters="using:Microsoft.Toolkit.Uwp.UI.Converters"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RequestedTheme="Light">
 
     <Grid>
         <Image Source="Images/Welcome Page.png" Stretch="Fill"/>
+        <Button x:Name="logoutButton" Content="Logout" Margin="70,231,0,0" VerticalAlignment="Top" Height="70" Width="177" RequestedTheme="Light" FontSize="20"/>
+        <Button x:Name="changePasswordButton" Content="Change Password" Margin="1161,228,0,0" VerticalAlignment="Top" RequestedTheme="Light" Height="70" Width="195" FontSize="20"/>
+        <!-- Want: A list view or data grid to see the recordings; first name, last name, maiden name, decade, and audio length-->
+       
+        <!--<ListView x:Name="firstnamelistView" Margin="159,341,1002,133" RequestedTheme="Light" BorderBrush="Black" BorderThickness="5,5,5,5"/>
+        <ListView x:Name="lastnamelistView" Margin="438,341,783,133" RequestedTheme="Light" BorderBrush="Red" BorderThickness="5,5,5,5"/>
+        <ListView x:Name="maidenLastNamelistView" Margin="717,341,544,133" RequestedTheme="Light" BorderBrush="#FF4AE7B8" BorderThickness="5,5,5,5"/>
+        <ListView x:Name="audioLengthlistView" Margin="956,341,305,133" RequestedTheme="Light" BorderBrush="#FFFF00F5" BorderThickness="5,5,5,5"/>-->
     </Grid>
 </Page>

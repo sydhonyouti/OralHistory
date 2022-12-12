@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<audio>
+  <recording>
+    <id>0</id>
+    <firstname>Jill</firstname>
+    <lastname>Doe</lastname>
+    <maidenName>""</maidenName>
+    <filename>""</filename>
+    <length>10:00</length>
+  </recording>
+  <recording>
+    <id>1</id>
+    <firstname>Joe</firstname>
+    <lastname>Doe</lastname>
+    <maidenName>Mama</maidenName>
+    <filename>""</filename>
+    <length>2:34</length>
+  </recording>
+  <recording>
+    <id>2</id>
+    <firstname>Jane</firstname>
+    <lastname>Mama</lastname>
+    <maidenName>Doe</maidenName>
+    <filename>""</filename>
+    <length>7:30</length>
+  </recording>
+</audio>

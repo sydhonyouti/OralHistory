@@ -22,7 +22,7 @@ namespace OralHistory
     /// </summary>
     public sealed partial class AdminLoginPage : Page
     {
-        SolidColorBrush colorBrush;
+        
         public AdminLoginPage()
         {
             this.InitializeComponent();
