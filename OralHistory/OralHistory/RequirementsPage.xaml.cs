@@ -48,11 +48,20 @@ namespace OralHistory
         // The continue button will be enabled once the last checkbox is clicked
         private void historyBoothCheckBox_Checked(object sender, RoutedEventArgs e)
         {
-            if (historyBoothCheckBox.IsChecked == true)
+            if (historyBoothCheckBox.IsChecked == true && researchCheckBox.IsChecked == true)
             {
                 Continue_btn_req.IsEnabled = true;
             }
             
+        }
+
+        // This is letting the user check the second box first and then the first
+        private void researchCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            if (researchCheckBox.IsChecked == true && historyBoothCheckBox.IsChecked == true)
+            {
+                Continue_btn_req.IsEnabled = true;
+            }
         }
     }
 }
